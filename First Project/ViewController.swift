@@ -9,11 +9,21 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var checkLabel: UILabel!
+    private var check = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        checkLabel.text = "\(check)"
     }
 
 
+    @IBAction func addOneButtonTapped() {
+       check += 1
+        checkLabel.text = "\(check)"
+    }
 }
+
+
+
 
